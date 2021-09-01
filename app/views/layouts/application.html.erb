@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SportApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=Shippori+Mincho:wght@800&display=swap" rel="stylesheet">  </head>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">  <body>
+        <div class="header-logo">
+        <%= link_to("assispo", "/") %>
+      </div>
+      <ul class="header-menus">
+        <% if session[:user_id]%>
+        <% current_user=User.find_by(id:session[:user_id])%>
+        <li>
+          <%= link_to(current_user.name,"/users/#{current_user.id}")%>
+        </li>
+        <li>
+          <%= link_to("投稿一覧", "/posts/index") %>
+        </li>
+        <li>
+          <%= link_to("新規投稿", "/posts/new") %>
+        </li> 
+        <li>
+          <%= link_to("ユーザー一覧","/users/index") %>
+        </li>
+        <li>
+          <%= link_to("ログアウト","/logout",{method:"post"})%>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to("assispoとは", "/about") %>
+        </li>      
+        <li>
+          <%= link_to("新規登録","/signup") %>
+        </li>
+        <li>
+          <%= link_to("ログイン","/login") %>
+        </li> 
+        <% end %>
+      </ul>
+    </header>
+    <% if flash[:notice]%>
+      <div class="flash">
+        <%=flash[:notice]%>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<div class="index-main">
+<div class="index-content">
+    <% @posts.each do |post| %>
+        <div class="posts-index-item">
+            <div class="post-user-name">
+            <div class="post-left">
+                <img src="<%= "/user_images/#{post.user.image_name}" %>">
+            </div>
+                <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+                <p>(<%= post.competition %>)</p>
+            </div>
+            <div class="post-bottom">
+                <%= link_to(post.content,"/posts/#{post.id}")%>
+            </div>
+        </div>
+    <% end %>
+</div>
+</div>

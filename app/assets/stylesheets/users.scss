@@ -1,0 +1,199 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* users/index ================================ */
+.index-main {
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #f5f8fa;
+}
+
+.index-content {
+    max-width: 600px;
+    margin: 60px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    clear: both;
+}
+
+.users-heading {
+    font-weight: 300;
+    margin: 60px 0 20px;
+    font-size: 48px;
+    color: #bcc8d4;
+    font-family:  "HG正楷書体-PRO";
+}
+
+.users-index-item {
+    padding: 20px 30px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+    display: table;
+    width: 100%;
+}
+
+.users-right {
+    width: 90%;
+    padding-left: 25px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+}
+.users-left img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 1px black;
+    object-fit: cover;
+}
+
+.users-left{
+    float: left;
+    width: 10%;
+}
+.users-index-item a {
+    font-weight: 600;
+    font-size: 20px;
+}
+.users-index-item a:hover{
+    color:black;
+    font-size: 22px;
+}
+
+
+  /* users/show ================================ */
+.show-main {
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #f5f8fa;
+}  
+.show-content {
+    max-width: 600px;
+    margin: 60px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    clear: both;
+}
+
+.users-show-item {
+    padding: 20px 30px;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 24px;
+    margin-left: 15px; 
+    text-align: center;
+}
+
+.users-show-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0.5px 1px 3px black;
+    margin: 20px 0 10px;
+    object-fit: cover;
+}
+
+
+.users-show-item h2 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.users-show-item p {
+    font-size: 18px;
+    margin-bottom: 1px;
+}
+
+.users-show-item a {
+    color: #8899a6;
+    text-decoration: underline;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.users-show-item a:hover{
+    color: black;
+}
+
+.users-show-item span {
+    color: #afb6bf;
+    font-weight: 200;
+    padding: 0 6px 0 8px;
+}
+
+.user-tabs {
+    margin-top: 40px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+}
+
+.user-tabs li {
+    float: left;
+}
+
+.user-tabs li.active {
+    border-bottom: 2px solid #3ecdc6;
+}
+
+.user-tabs li.active a {
+    color: #57575f;
+}
+
+.user-tabs a {
+    display: inline-block;
+    padding: 16px 30px;
+    color: #afb6bf;
+}
+
+.user-tabs a:hover{
+    color: black;
+}
+
+
+  /* users/new, users/edit ================================ */
+.users-form input {
+    margin-bottom: 15px;
+}
+.new-main {
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #f5f8fa;
+}  
+.new-content {
+    max-width: 600px;
+    margin: 60px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    clear: both;
+}
+
+/* users/login ========================================= */
+
+.login-main{
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #f5f8fa;
+}
+
+.login-content{
+    max-width: 600px;
+    margin: 60px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    clear: both;
+}
